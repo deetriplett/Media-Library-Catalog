@@ -1,4 +1,5 @@
 <?php 
+include("inc/data.php");
 
 $pageTitle = "Full Catalog";
 $section = null;
