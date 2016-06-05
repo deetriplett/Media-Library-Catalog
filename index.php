@@ -1,4 +1,6 @@
 <?php 
+include("inc/data.php");
+include("inc/functions.php");
 $pageTitle = "Personal Media Library";
 $section = null;
 
@@ -10,27 +12,11 @@ include("inc/header.php"); ?>
 				<h2>May we suggest something?</h2>
 
         <ul class="items">
-            <li>
-                <a href="#">
-                    <img src="img/media/design_patterns.jpg" alt="Design Patterns">
-                    <p>View Details</p>
-                </a>
-            </li><li>
-                <a href="#">
-                    <img src="img/media/forest_gump.jpg" alt="Forest Gump">
-                    <p>View Details</p>
-                </a>
-            </li><li>
-                <a href="#">
-                    <img src="img/media/beethoven.jpg" alt="Beethoven">
-                    <p>View Details</p>
-                </a>
-            </li><li>
-                <a href="#">
-                    <img src="img/media/clean_code.jpg" alt="Clean Code">
-                    <p>View Details</p>
-                </a>
-            </li>								
+          <?php 
+            foreach($catalog as $id => $item){
+            echo get_item_html($id, $item);
+           }
+          ?>		
 				</ul>
 
 			</div>
