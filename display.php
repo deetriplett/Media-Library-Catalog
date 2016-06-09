@@ -23,7 +23,10 @@ include("inc/header.php"); ?>
 
 <div class="section page">
   <div class="wrapper">
-    <img src="<?php echo $item["img"]; ?>" alt="<?php echo $item["title"]; ?>" />
+    <div class="media-picture">
+    <span><img src="<?php echo $item["img"]; ?>" alt="<?php echo $item["title"]; ?>" />
+      </span>
+    </div>
   </div>
 </div>
 
