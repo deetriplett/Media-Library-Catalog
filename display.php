@@ -1,3 +1,4 @@
+//display the details/data of each item
 <?php 
 include("inc/data.php");
 include("inc/functions.php");
@@ -22,7 +23,7 @@ include("inc/header.php"); ?>
 
 <div class="section page">
   <div class="wrapper">
-    <img src="" alt="" />
+    <img src="<?php echo $item["img"]; ?>" alt="<?php echo $item["title"]; ?>" />
   </div>
 </div>
 
