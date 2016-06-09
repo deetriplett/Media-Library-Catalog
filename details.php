@@ -23,6 +23,14 @@ include("inc/header.php"); ?>
 
 <div class="section page">
   <div class="wrapper">
+    <div class="breadcrumbs"> 
+      <a href="catalog.php"></a>
+        &gt; //separator
+      <a href="catalog.php?cat=<?php echo strtolower($item["category"]);?>">
+      <?php echo $item["category"];?></a>
+        &gt;
+      <?php echo $item["title"]; ?>
+</div>
     <div class="media-picture">
     <span><img src="<?php echo $item["img"]; ?>" alt="<?php echo $item["title"]; ?>" />
       </span>
@@ -49,7 +57,7 @@ include("inc/header.php"); ?>
         <?php if (strtolower($item["category"]) == $books){ ?>
           <tr>
           <th>Authors</th>
-          <td><?php echo implode(",",$item["authors"]);?></td> //implode is function used to join each array element w/ a string
+          <td><?php echo implode(",",$item["authors"]);?></td>
         </tr>
         <tr>
           <th>Publisher</th>
