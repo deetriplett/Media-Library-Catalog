@@ -49,7 +49,7 @@ include("inc/header.php"); ?>
         <?php if (strtolower($item["category"]) == $books){ ?>
           <tr>
           <th>Authors</th>
-          <td><?php echo implode(",",$item["authors"]);?></td>
+          <td><?php echo implode(",",$item["authors"]);?></td> //implode is function used to join each array element w/ a string
         </tr>
         <tr>
           <th>Publisher</th>
