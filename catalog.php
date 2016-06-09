@@ -24,8 +24,8 @@ include("inc/header.php"); ?>
     <h1><?php echo $pageTitle; ?></h1>
     <ul class="items">
       <?php 
-         $random = array_rand($catalog, 4);
-          foreach($random as $id){
+         $categories = array_category($catalog, $section);
+          foreach($categories as $id){
           echo get_item_html($id, $catalog[$id]);
         }
       ?>
