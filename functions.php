@@ -22,7 +22,7 @@ function array_category($catalog, $category){
       $output[$id] = $sort; 
     }
   }//end foreach loop
-  asort($output);
+  asort($output); //function sorts array VALUES from low to high while maintaining index association
   return array_keys($output);
   
 
