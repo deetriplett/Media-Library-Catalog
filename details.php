@@ -46,8 +46,7 @@ include("inc/header.php"); ?>
           <th>Year</th>
           <td><?php echo $item["year"];?></td>
         </tr>
-        <?php
-        if (strtolower($item["category"]) == $books) { ?>
+        <?php if (strtolower($item["category"]) == $books){ ?>
           <tr>
           <th>Authors</th>
           <td><?php echo implode(",",$item["authors"]);?></td>
@@ -60,8 +59,25 @@ include("inc/header.php"); ?>
           <th>ISBN</th>
           <td><?php echo $item["isbn"];?></td>
         </tr>
+        <?php } else if (strtolower($item["category"]) == $movies){?>
+        <tr>
+          <th>Director</th>
+          <td><?php echo $item["director"];?></td>
+        </tr>
+        <tr>
+          <th>Writers</th>
+          <td><?php echo implode(",",$item["writers"]);?></td>
+        </tr>
+        <tr>
+          <th>Stars/th>
+          <td><?php echo implode(",",$item["stars"]);?></td>
+        </tr>
+        <?php } else if (strtolower($item["category"]) == $music){?>
+       <tr>
+          <th>Artist</th>
+          <td><?php echo $item["artist"];?></td>
+        </tr>
         <?php } ?>
-     
       </table>
     </div>
   </div>
