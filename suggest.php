@@ -13,9 +13,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
     echo "Bad Form Input!";
     exit;
   }
-
+  
   require("inc/phpmailer/class.phpmailer.php");
-
+  $mail = new PHPMailer;
+  if(!$mail->ValidateAddress($email)){
+    echo "Error. Invalid Email Address.";
+    exit;
+    }
+  // if email addy not true display error and stop execution &=> related to arrays and their keys; -> objects and their properties
   echo "<pre>";
   $email_body = "";
   $email_body .= "Name: " . $name . "\n"; //Line Breaks
@@ -70,4 +75,4 @@ include("inc/header.php"); ?>
 
 </div>
 
-<?php include("inc/footer.php"); ?>
+<?php include("inc/footer.php"); ?>s
